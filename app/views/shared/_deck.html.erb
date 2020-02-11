@@ -6,7 +6,7 @@
             <%= image_tag post.image_url, class:"card-img-top"%>
             <div class="card-body">
             <h5 class="card-title"><%= link_to post.title, post_path(post) %></h5>
-            <h5 class="card-title">Posted: <%= time_ago_in_words(post.created_at)%> ago</h5>
+            <h5 class="card-title">Posted: <%= post.created_at %></h5>
             <h5 class="card-title">Content: <%= post.content.gsub("spoiler", "") %></h5>
             <%= link_to 'Edit', edit_post_path(post), class:"btn btn-primary" %>
             <%= link_to 'Destroy', post, class:"btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
